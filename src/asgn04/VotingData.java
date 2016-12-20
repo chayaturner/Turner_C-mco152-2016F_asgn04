@@ -7,6 +7,8 @@ import java.util.Observable;
 
 public class VotingData extends Observable {
 	
+	
+	
 	// Object to use for pushing the information
 	public class VoteStats
 	{
