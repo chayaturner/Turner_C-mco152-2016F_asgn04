@@ -6,7 +6,6 @@ public class ElecAlwaysRep implements IElectoralBehavior{
 	
 	@Override
 	public int electoralDemocraticReport(int demVotes) {
-		
 		return electoralDemocraticVote;
 	}
 	

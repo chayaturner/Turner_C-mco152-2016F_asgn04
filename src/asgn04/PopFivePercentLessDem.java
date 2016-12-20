@@ -6,12 +6,13 @@ public class PopFivePercentLessDem implements IPopularBehavior{
 	
 	@Override
 	public int popularDemocraticReport(int demVote) {
-		
+		democraticVotes = demVote - (int)(demVote * 0.05);
 		return democraticVotes;
 	}
 	
 	public int popularRepublicanReport(int repVote){
-		 return republicanVotes;
+		republicanVotes = repVote;
+		return republicanVotes;
 	}
 	
 

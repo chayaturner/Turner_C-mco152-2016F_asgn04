@@ -19,9 +19,9 @@ public class HonestDisplay extends VoteDisplay implements Observer{
 		{
 			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
 			
-			popDemVotes = voteStats.getPopDemVotes();
-			popRepVotes = voteStats.getPopRepVotes();
-			elecDemVotes = voteStats.getElecDemVotes();
+			popDemVotes = voteStats.getDemVotes();
+			popRepVotes = voteStats.getRepVotes();
+			elecDemVotes = voteStats.getElecVotes();
 			elecRepVotes = voteStats.getElecRepVotes();
 			
 			display();
