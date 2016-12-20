@@ -14,11 +14,11 @@ public class FavorRepublicanDisplay extends VoteDisplay implements Observer{
 	}
 	
 	@Override
-	public void update(Observable observable, Object stateObject)
+	public void update(Observable observable, Object stateObject1)
 	{
-		if (stateObject instanceof VotingData.VoteStats)
+		if (stateObject1 instanceof VotingData.VoteStats)
 		{
-			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
+			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject1;
 			popDemVotes = voteStats.getDemVotes();
 			popRepVotes = voteStats.getRepVotes();
 			elecVotes = voteStats.getElecVotes();

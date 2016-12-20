@@ -9,7 +9,7 @@ public class FavorDemocraticDisplay extends VoteDisplay implements Observer{
 		elecBehavior = new ElecMostVotesDem();
 		//elecBehavior = new ElecTwoPercentMoreDem();
 		popBehavior = new PopIgnoreMostRep();
-		
+
 		observable.addObserver(this);
 	}
 	
