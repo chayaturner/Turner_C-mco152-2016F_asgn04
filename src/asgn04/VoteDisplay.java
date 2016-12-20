@@ -8,7 +8,7 @@ public abstract class VoteDisplay {
 
 	IPopularBehavior popBehavior;
 	IElectoralBehavior elecBehavior;
-	int popDemVotes, popRepVotes, elecDemVotes, elecRepVotes;
+	int popDemVotes, popRepVotes, elecVotes;
 		
 	public void display()
 	{		
@@ -20,8 +20,7 @@ public abstract class VoteDisplay {
 		System.out.println("Current Election Statistics:\t "
 				+ "Popular Democratic vote: " + performPopDem() 
 				+ "Popular Republican vote: " + performPopRep()
-				+ "Electoral Democratic vote: " + performElecDem()
-				+ "Electoral Republican vote: " + performElecRep()
+				+ "Electoral vote: " + performElec()
 				+ ".");
 	}
 	
@@ -33,12 +32,9 @@ public abstract class VoteDisplay {
 		return popBehavior.popularRepublicanReport(popRepVotes);
 	}
 	
-	public int performElecDem(){
-		return elecBehavior.electoralDemocraticReport(elecDemVotes);
+	public int performElec(){
+		return elecBehavior.electoralReport(elecVotes);
 	}
 	
-	public int performElecRep(){
-		return elecBehavior.electoralRepublicanReport(elecRepVotes);
-	}
 	
 }

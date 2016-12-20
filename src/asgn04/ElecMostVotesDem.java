@@ -2,16 +2,12 @@ package asgn04;
 
 public class ElecMostVotesDem implements IElectoralBehavior{
 
-	private int electoralDemocraticVote, electoralRepublicanVote;
+	private int electoralVote;
 	
 	@Override
-	public int electoralDemocraticReport(int demVotes) {
+	public int electoralReport(int elecVotes) {
 		
-		return electoralDemocraticVote;
+		return electoralVote;
 	}
 	
-	public int electoralRepublicanReport(int repVotes){
-		
-		return electoralRepublicanVote;
-	}
 }

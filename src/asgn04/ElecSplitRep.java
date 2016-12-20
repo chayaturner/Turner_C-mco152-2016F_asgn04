@@ -2,16 +2,11 @@ package asgn04;
 
 public class ElecSplitRep implements IElectoralBehavior{
 
-private int electoralDemocraticVote, electoralRepublicanVote;
+private int electoralVote;
 	
 	@Override
-	public int electoralDemocraticReport(int demVotes) {
+	public int electoralReport(int elecVotes) {
 		
-		return electoralDemocraticVote;
-	}
-	
-	public int electoralRepublicanReport(int repVotes){
-		
-		return electoralRepublicanVote;
+		return electoralVote;
 	}
 }

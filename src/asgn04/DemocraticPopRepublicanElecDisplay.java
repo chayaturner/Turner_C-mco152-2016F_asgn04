@@ -21,8 +21,7 @@ public class DemocraticPopRepublicanElecDisplay extends VoteDisplay implements O
 			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
 			popDemVotes = voteStats.getDemVotes();
 			popRepVotes = voteStats.getRepVotes();
-			elecDemVotes = voteStats.getElecVotes();
-			elecRepVotes = voteStats.getElecRepVotes();
+			elecVotes = voteStats.getElecVotes();
 			
 			display();
 		}

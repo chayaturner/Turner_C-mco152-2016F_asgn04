@@ -2,16 +2,12 @@ package asgn04;
 
 public class ElecHonest implements IElectoralBehavior{
 
-private int electoralDemocraticVote, electoralRepublicanVote;
+private int electoralVote;
 	
 	@Override
-	public int electoralDemocraticReport(int demVotes) {
-		electoralDemocraticVote = demVotes;
-		return electoralDemocraticVote;
+	public int electoralReport(int elecVotes) {
+		electoralVote = elecVotes;
+		return electoralVote;
 	}
 	
-	public int electoralRepublicanReport(int repVotes){
-		electoralRepublicanVote = repVotes;
-		return electoralRepublicanVote;
-	}
 }

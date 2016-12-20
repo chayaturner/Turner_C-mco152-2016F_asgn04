@@ -21,8 +21,7 @@ public class FavorRepublicanDisplay extends VoteDisplay implements Observer{
 			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
 			popDemVotes = voteStats.getDemVotes();
 			popRepVotes = voteStats.getRepVotes();
-			elecDemVotes = voteStats.getElecVotes();
-			elecRepVotes = voteStats.getElecRepVotes();
+			elecVotes = voteStats.getElecVotes();
 			
 			display();
 		}
