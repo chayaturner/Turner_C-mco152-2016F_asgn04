@@ -18,8 +18,12 @@ public class HonestDisplay extends VoteDisplay implements Observer{
 		if (stateObject instanceof VotingData.VoteStats)
 		{
 			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
-			popularVote = voteStats.getDemVotes() + voteStats.getRepVotes();
-			electoralVote = voteStats.getElecVotes();
+			
+			popDemVotes = voteStats.getPopDemVotes();
+			popRepVotes = voteStats.getPopRepVotes();
+			elecDemVotes = voteStats.getElecDemVotes();
+			elecRepVotes = voteStats.getElecRepVotes();
+			
 			display();
 		}
 	}

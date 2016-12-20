@@ -10,35 +10,42 @@ public class VotingData extends Observable {
 	// Object to use for pushing the information
 	public class VoteStats
 	{
-		private int democraticVotes;
-		private int republicanVotes;
-		private int electoralVotes;
+		private int popularDemocraticVotes;
+		private int popularRepublicanVotes;
+		private int electoralDemocraticVotes;
+		private int electoralRepublicanVotes;
 		
-		public VoteStats (int demVotes, int repVotes, int elecVotes)
-		{ this.democraticVotes = demVotes; this.republicanVotes = repVotes; this.electoralVotes = elecVotes; }
+		public VoteStats (int popDemVotes, int popRepVotes, int elecDemVotes, int elecRepVotes)
+		{ this.popularDemocraticVotes = popDemVotes; this.popularRepublicanVotes = popRepVotes;
+			this.electoralDemocraticVotes = elecDemVotes; 
+				this.electoralRepublicanVotes = elecRepVotes; }
 		
-		public int getDemVotes () { return democraticVotes; }
-		public int getRepVotes () { return republicanVotes; }
-		public int getElecVotes () { return electoralVotes; }
+		public int getPopDemVotes () { return popularDemocraticVotes; }
+		public int getPopRepVotes () { return popularRepublicanVotes; }
+		public int getElecDemVotes () { return electoralDemocraticVotes; }
+		public int getElecRepVotes() { return electoralRepublicanVotes; }
+		
 	}
 	
-	private int democraticVotes;
-	private int republicanVotes;
-	private int electoralVotes;
+		private int popularDemocraticVotes;
+		private int popularRepublicanVotes;
+		private int electoralDemocraticVotes;
+		private int electoralRepublicanVotes;
 	
 	public VotingData () {}
 	
 	public void votesChanged () 
 	{
 		setChanged();
-		notifyObservers(new VoteStats (democraticVotes, republicanVotes, electoralVotes));
+		notifyObservers(new VoteStats (popularDemocraticVotes, popularRepublicanVotes, electoralDemocraticVotes, electoralRepublicanVotes));
 	}
 	
-	public void setVotes (int demVotes, int repVotes, int elecVotes)
+	public void setVotes (int popDemVotes, int popRepVotes, int elecDemVotes, int elecRepVotes)
 	{
-		this.democraticVotes = demVotes;
-		this.republicanVotes = repVotes;
-		this.electoralVotes = elecVotes;
+		this.popularDemocraticVotes = popDemVotes;
+		this.popularRepublicanVotes = popRepVotes;
+		this.electoralDemocraticVotes = elecDemVotes;
+		this.electoralRepublicanVotes = elecRepVotes;
 		votesChanged();
 	}
 	

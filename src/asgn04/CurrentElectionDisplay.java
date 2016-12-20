@@ -8,8 +8,10 @@ import java.util.Observer;
 
 public class CurrentElectionDisplay implements Observer, IDisplay {
 
-	private int popularVote;
-	private int electoralVote;
+	private int popDemVote;
+	private int popRepVote;
+	private int elecDemVote;
+	private int elecRepVote;
 	
 	public CurrentElectionDisplay(Observable observable)
 	{
