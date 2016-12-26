@@ -6,18 +6,16 @@ public class PopHonest implements IPopularBehavior{
 
 	@Override
 	public int popularDemocraticReport(int[] data) {
-		int[] votesArray = data;
-		for(int i=0; i < votesArray.length; i++){
-			demVotes+=votesArray[i];
+		for(int i=0; i < data.length; i++){
+			demVotes+=data[i];
 		}
 		return demVotes;
 	}
 
 	@Override
 	public int popularRepublicanReport(int[] data) {		
-		int[] votesArray = data;
-		for(int i=0; i < votesArray.length; i++){
-			repVotes+=votesArray[i];
+		for(int i=0; i < data.length; i++){
+			repVotes+=data[i];
 		}
 		return repVotes;
 	}
