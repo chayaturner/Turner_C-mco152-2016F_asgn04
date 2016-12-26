@@ -2,17 +2,16 @@ package asgn04;
 
 public class PopHonest implements IPopularBehavior{
 	
-private int democraticVotes, republicanVotes;
-	
+	private VotingData demVotes, repVotes;
+
 	@Override
-	public int popularDemocraticReport(int demVote) {
-		democraticVotes = demVote;
-		return democraticVotes;
+	public VotingData popularDemocraticReport() {
+		return demVotes;
 	}
-	
-	public int popularRepublicanReport(int repVote){
-		republicanVotes = repVote;
-		return republicanVotes;
+
+	@Override
+	public VotingData popularRepublicanReport() {
+		return repVotes;
 	}
 
 }

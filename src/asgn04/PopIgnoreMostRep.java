@@ -2,18 +2,16 @@ package asgn04;
 
 public class PopIgnoreMostRep implements IPopularBehavior{
 
-private int democraticVotes, republicanVotes;
+private int demVotes, repVotes;
 	
 	@Override
-	public int popularDemocraticReport(int demVote) {
-		democraticVotes = demVote;
-		return democraticVotes;
+	public int popularDemocraticReport() {
+		return demVotes;
 	}
 	
-	public int popularRepublicanReport(int repVote){
+	public int popularRepublicanReport(){
 		//ignore the state with the most republican votes
-		republicanVotes = 0;
-		return republicanVotes;
+		return repVotes;
 	}
 
 }

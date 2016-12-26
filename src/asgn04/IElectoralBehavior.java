@@ -1,5 +1,6 @@
 package asgn04;
 
 public interface IElectoralBehavior {
-	public int electoralReport(int elecVotes);
+	public VotingData electoralDemReport();
+	public VotingData electoralRepReport();
 }

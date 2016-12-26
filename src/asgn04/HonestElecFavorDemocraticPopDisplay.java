@@ -20,7 +20,8 @@ public class HonestElecFavorDemocraticPopDisplay extends VoteDisplay implements 
 			VotingData.VoteStats voteStats = (VotingData.VoteStats) stateObject;
 			popDemVotes = voteStats.getDemVotes();
 			popRepVotes = voteStats.getRepVotes();
-			elecVotes = voteStats.getElecVotes();
+			elecDemVotes = voteStats.getElecDemVotes();
+			elecRepVotes = voteStats.getElecRepVotes();
 			
 			display();
 		}

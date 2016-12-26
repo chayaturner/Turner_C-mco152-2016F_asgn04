@@ -2,13 +2,19 @@ package asgn04;
 
 public class ElecTwoPercentMoreDem implements IElectoralBehavior{
 
-	private int electoralVote;
+	private int electoralDemVote;
+	private int electoralRepVote;
 	
 	@Override
-	public int electoralReport(int elecVotes) {
-		
-		return electoralVote;
+	public int electoralDemReport(int elecDemVotes) {
+		electoralDemVote = elecDemVotes;
+		return electoralDemVote;
 	}
-	
+
+	@Override
+	public int electoralRepReport(int elecRepVotes) {
+		electoralRepVote = elecRepVotes;
+		return electoralRepVote;
+	}
 
 }
