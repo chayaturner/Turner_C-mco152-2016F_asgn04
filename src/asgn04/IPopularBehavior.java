@@ -1,6 +1,6 @@
 package asgn04;
 
 public interface IPopularBehavior {
-	public VotingData popularDemocraticReport();
-	public VotingData popularRepublicanReport();
+	public int popularDemocraticReport(int[] data);
+	public int popularRepublicanReport(int[] data);
 }

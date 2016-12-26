@@ -1,10 +1,20 @@
 package asgn04;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
 public class HonestDisplay extends VoteDisplay implements Observer{
 
+	private int[] popDemVotes;
+	private int[] popRepVotes;
+	private int[] elecDemVotes;
+	private int[] elecRepVotes;
+	
+	private int pdv, prv, edv, erv;
+	
 	public HonestDisplay(Observable observable){
 		elecBehavior = new ElecHonest();
 		popBehavior = new PopHonest();
@@ -27,5 +37,42 @@ public class HonestDisplay extends VoteDisplay implements Observer{
 			display();
 		}
 	}
-
+	
+	public void display()
+	{
+		// some special algorithm for predicting the votes and displaying the results		
+		DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+		Date date = new Date();
+		String currentTime = dateFormat.format(date);
+		System.out.println("Current Election Statistics from Honest Display:");
+		System.out.println("*All reports are purely observational and not legally binding in any way.* " + currentTime);
+		
+		//get the reported results that have been manipulated by the behaviors
+		popBehavior.popularDemocraticReport(popDemVotes);
+		popBehavior.popularRepublicanReport(popRepVotes);
+		elecBehavior.electoralDemReport(elecDemVotes);
+		elecBehavior.electoralRepReport(elecRepVotes);
+	
+		
+		for(int i = 0; i < popDemVotes.length; i++){
+			pdv += popDemVotes[i];
+			prv += popRepVotes[i];
+			edv += elecDemVotes[i];
+			erv += elecRepVotes[i];
+			
+		}
+		
+			System.out.println("\nPopular Democratic votes: " + pdv 
+					+ "\nPopular Republican votes: " + prv
+					+ "\nElectoral Democratic votes: " + edv
+					+ "\nElectoral Republican votes: " + erv
+					+ "\n");
+			
+			if(edv>erv){
+				System.out.println("Democratic party is in the lead.\n");
+			} else {
+				System.out.println("Republican party is in the lead.\n");
+			}
+		
+	}
 }

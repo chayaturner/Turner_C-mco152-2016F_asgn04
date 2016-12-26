@@ -38,12 +38,20 @@ private int repVotes;
 	*/
 	
 	@Override
-	public int electoralDemReport() {
+	public int electoralDemReport(int[] data) {
+		int[] votesArray = data;
+		for(int i=0; i < votesArray.length; i++){
+			demVotes+=votesArray[i];
+		}
 		return demVotes;
 	}
 	
 	@Override
-	public int electoralRepReport() {
+	public int electoralRepReport(int[] data) {
+		int[] votesArray = data;
+		for(int i=0; i < votesArray.length; i++){
+			repVotes+=votesArray[i];
+		}
 		return repVotes;
 	}
 	
