@@ -2,8 +2,8 @@ package asgn04;
 
 public class ElecHonest implements IElectoralBehavior{
 
-private int demVotes;
-private int repVotes;
+	private int demVotes;
+	private int repVotes;
 
 	@Override
 	public int electoralDemReport(int[] data) {

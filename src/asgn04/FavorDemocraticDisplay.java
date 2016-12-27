@@ -6,6 +6,7 @@ import java.util.Observer;
 public class FavorDemocraticDisplay extends VoteDisplay implements Observer{
 	
 	public FavorDemocraticDisplay(Observable observable){
+		displayName = "Favor Democratic Display";
 		elecBehavior = new ElecMostVotesDem();
 		//elecBehavior = new ElecTwoPercentMoreDem();
 		popBehavior = new PopIgnoreMostRep();

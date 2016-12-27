@@ -6,6 +6,7 @@ import java.util.Observer;
 public class DemocraticPopRepublicanElecDisplay extends VoteDisplay implements Observer{
 
 	public DemocraticPopRepublicanElecDisplay(Observable observable){
+		displayName = "Democratic Pop Republican Elec Display";
 		elecBehavior = new ElecAlwaysRep();
 		//elecBehavior = new ElecSplitRep();
 		popBehavior = new  PopIgnoreMostRep();
@@ -27,5 +28,7 @@ public class DemocraticPopRepublicanElecDisplay extends VoteDisplay implements O
 			display();
 		}
 	}
+	
+	
 
 }
